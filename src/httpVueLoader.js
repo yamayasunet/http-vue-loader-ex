@@ -262,7 +262,11 @@
 							this.template = new TemplateContext(this, it);
 							break;
 						case 'SCRIPT':
-							this.script = new ScriptContext(this, it);
+							if (it.getAttribute('type') == 'text/x-template') {
+								this.template = new TemplateContext(this, it);
+							} else {
+								this.script = new ScriptContext(this, it);
+							}
 							break;
 						case 'STYLE':
 							this.styles.push(new StyleContext(this, it));

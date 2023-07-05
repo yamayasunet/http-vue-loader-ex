@@ -113,6 +113,21 @@ or, using an array
         ...
 ```
 
+### Extend
+
+vue template `<script type="text/x-template">` support
+
+`my-component.vue`
+```vue
+<script type="text/x-template">
+    <div class="hello">Hello {{who}}</div>
+</script>
+```
+
+for example...
+    `<v-slot:item.camelCase="value">` is possible!
+
+
 ## Features
 * `<template>`, `<script>` and `<style>` support the `src` attribute.
 * `<style scoped>` is supported.
@@ -314,3 +329,4 @@ Due to the lack of suitable API in Google Chrome and Internet Explorer, syntax e
 ## Credits
 
 [Franck Freiburger](https://www.franck-freiburger.com)
+[yamayasu](https://github.com/yamayasunet)
